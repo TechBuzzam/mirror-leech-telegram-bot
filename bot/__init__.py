@@ -82,7 +82,7 @@ status_dict = {}
 task_dict = {}
 rss_dict = {}
 
-BOT_TOKEN = environ.get("BOT_TOKEN", "")
+BOT_TOKEN = environ.get("BOT_TOKEN", "6081100562:AAFjKwBuvJW50VUCJtj4bZ0_QFHH1GD4VPc")
 if len(BOT_TOKEN) == 0:
     log_error("BOT_TOKEN variable is missing! Exiting now")
     exit(1)
@@ -131,7 +131,7 @@ if DATABASE_URL:
             del qbit_opt["_id"]
             qbit_options = qbit_opt
         conn.close()
-        BOT_TOKEN = environ.get("BOT_TOKEN", "")
+        BOT_TOKEN = environ.get("BOT_TOKEN", "6081100562:AAFjKwBuvJW50VUCJtj4bZ0_QFHH1GD4VPc")
         bot_id = BOT_TOKEN.split(":", 1)[0]
         DATABASE_URL = environ.get("DATABASE_URL", "")
     except Exception as e:
@@ -139,26 +139,26 @@ if DATABASE_URL:
 else:
     config_dict = {}
 
-OWNER_ID = environ.get("OWNER_ID", "")
+OWNER_ID = environ.get("OWNER_ID", "1463744219")
 if len(OWNER_ID) == 0:
     log_error("OWNER_ID variable is missing! Exiting now")
     exit(1)
 else:
     OWNER_ID = int(OWNER_ID)
 
-TELEGRAM_API = environ.get("TELEGRAM_API", "")
+TELEGRAM_API = environ.get("TELEGRAM_API", "8755370")
 if len(TELEGRAM_API) == 0:
     log_error("TELEGRAM_API variable is missing! Exiting now")
     exit(1)
 else:
     TELEGRAM_API = int(TELEGRAM_API)
 
-TELEGRAM_HASH = environ.get("TELEGRAM_HASH", "")
+TELEGRAM_HASH = environ.get("TELEGRAM_HASH", "54261233493bbc5bbf489146dd2909dc")
 if len(TELEGRAM_HASH) == 0:
     log_error("TELEGRAM_HASH variable is missing! Exiting now")
     exit(1)
 
-GDRIVE_ID = environ.get("GDRIVE_ID", "")
+GDRIVE_ID = environ.get("GDRIVE_ID", "0AAixcdXELHt0Uk9PVA")
 if len(GDRIVE_ID) == 0:
     GDRIVE_ID = ""
 
@@ -170,11 +170,11 @@ RCLONE_FLAGS = environ.get("RCLONE_FLAGS", "")
 if len(RCLONE_FLAGS) == 0:
     RCLONE_FLAGS = ""
 
-DEFAULT_UPLOAD = environ.get("DEFAULT_UPLOAD", "")
+DEFAULT_UPLOAD = environ.get("DEFAULT_UPLOAD", "gd")
 if DEFAULT_UPLOAD != "rc":
     DEFAULT_UPLOAD = "gd"
 
-DOWNLOAD_DIR = environ.get("DOWNLOAD_DIR", "")
+DOWNLOAD_DIR = environ.get("DOWNLOAD_DIR", "/usr/src/app/downloads/")
 if len(DOWNLOAD_DIR) == 0:
     DOWNLOAD_DIR = "/usr/src/app/downloads/"
 elif not DOWNLOAD_DIR.endswith("/"):
@@ -229,7 +229,7 @@ STREAMWISH_API = environ.get("STREAMWISH_API", "")
 if len(STREAMWISH_API) == 0:
     STREAMWISH_API = ""
 
-INDEX_URL = environ.get("INDEX_URL", "").rstrip("/")
+INDEX_URL = environ.get("INDEX_URL", "False").rstrip("/")
 if len(INDEX_URL) == 0:
     INDEX_URL = ""
 
@@ -303,13 +303,13 @@ QUEUE_UPLOAD = "" if len(QUEUE_UPLOAD) == 0 else int(QUEUE_UPLOAD)
 INCOMPLETE_TASK_NOTIFIER = environ.get("INCOMPLETE_TASK_NOTIFIER", "")
 INCOMPLETE_TASK_NOTIFIER = INCOMPLETE_TASK_NOTIFIER.lower() == "true"
 
-STOP_DUPLICATE = environ.get("STOP_DUPLICATE", "")
+STOP_DUPLICATE = environ.get("STOP_DUPLICATE", "True")
 STOP_DUPLICATE = STOP_DUPLICATE.lower() == "true"
 
 IS_TEAM_DRIVE = environ.get("IS_TEAM_DRIVE", "")
 IS_TEAM_DRIVE = IS_TEAM_DRIVE.lower() == "true"
 
-USE_SERVICE_ACCOUNTS = environ.get("USE_SERVICE_ACCOUNTS", "")
+USE_SERVICE_ACCOUNTS = environ.get("USE_SERVICE_ACCOUNTS", "True")
 USE_SERVICE_ACCOUNTS = USE_SERVICE_ACCOUNTS.lower() == "true"
 
 WEB_PINCODE = environ.get("WEB_PINCODE", "")
