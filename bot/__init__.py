@@ -158,7 +158,7 @@ if len(TELEGRAM_HASH) == 0:
     log_error("TELEGRAM_HASH variable is missing! Exiting now")
     exit(1)
 
-GDRIVE_ID = environ.get("GDRIVE_ID", "0AAixcdXELHt0Uk9PVA")
+GDRIVE_ID = environ.get("GDRIVE_ID", "0ALEcAMIzlI3zUk9PVA")
 if len(GDRIVE_ID) == 0:
     GDRIVE_ID = ""
 
